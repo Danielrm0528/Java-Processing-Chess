@@ -166,30 +166,30 @@ public class Ajedrez {
       JSONObject pieza = piezasBlancas.getJSONObject(i);
       String type = pieza.getString("tipo");
       if(type.equals("p")) {
-        Pieza piezaObj = factory.crearPieza(Type.Pawn,pieza.getBoolean("blanco"),partida,pieza.getInt("x"),pieza.getInt("y"),loadImage("whitePawn.png"));
+        Pieza piezaObj = factory.crearPieza(Type.Pawn,pieza.getBoolean("blanco"),partida,pieza.getInt("x"),pieza.getInt("y"),loadImage("Pieces/whitePawn.png"));
         println(piezaObj);
         Pawn pawn = (Pawn) piezaObj;
         pawn.setMovido(pieza.getBoolean("movido"));
         blancas.add(piezaObj);
       } else if(type.equals("r")) {
-        Pieza piezaObj = factory.crearPieza(Type.Rook,pieza.getBoolean("blanco"),partida,pieza.getInt("x"),pieza.getInt("y"),loadImage("whiteRook.png"));
+        Pieza piezaObj = factory.crearPieza(Type.Rook,pieza.getBoolean("blanco"),partida,pieza.getInt("x"),pieza.getInt("y"),loadImage("Pieces/whiteRook.png"));
         Rook rook = (Rook) piezaObj;
         rook.setMovido(pieza.getBoolean("movido"));
         blancas.add(piezaObj);
       } else if(type.equals("k")) {
-        Pieza piezaObj = factory.crearPieza(Type.King,pieza.getBoolean("blanco"),partida,pieza.getInt("x"),pieza.getInt("y"),loadImage("whiteKing.png"));
+        Pieza piezaObj = factory.crearPieza(Type.King,pieza.getBoolean("blanco"),partida,pieza.getInt("x"),pieza.getInt("y"),loadImage("Pieces/whiteKing.png"));
         King king = (King) piezaObj;
         king.setMovido(pieza.getBoolean("movido")); 
         partida.setwKing(piezaObj);
         blancas.add(piezaObj);
       } else if(type.equals("n")) {
-        Pieza piezaObj = factory.crearPieza(Type.Knight,pieza.getBoolean("blanco"),partida,pieza.getInt("x"),pieza.getInt("y"),loadImage("whiteKnight.png"));
+        Pieza piezaObj = factory.crearPieza(Type.Knight,pieza.getBoolean("blanco"),partida,pieza.getInt("x"),pieza.getInt("y"),loadImage("Pieces/whiteKnight.png"));
         blancas.add(piezaObj);
       } else if(type.equals("b")) {
-        Pieza piezaObj = factory.crearPieza(Type.Bishop,pieza.getBoolean("blanco"),partida,pieza.getInt("x"),pieza.getInt("y"),loadImage("whiteBishop.png"));
+        Pieza piezaObj = factory.crearPieza(Type.Bishop,pieza.getBoolean("blanco"),partida,pieza.getInt("x"),pieza.getInt("y"),loadImage("Pieces/whiteBishop.png"));
         blancas.add(piezaObj);
       } else if (type.equals("q")) {
-        Pieza piezaObj = factory.crearPieza(Type.Queen,pieza.getBoolean("blanco"),partida,pieza.getInt("x"),pieza.getInt("y"),loadImage("whiteQueen.png"));
+        Pieza piezaObj = factory.crearPieza(Type.Queen,pieza.getBoolean("blanco"),partida,pieza.getInt("x"),pieza.getInt("y"),loadImage("Pieces/whiteQueen.png"));
         blancas.add(piezaObj);
       }
     }
@@ -202,29 +202,29 @@ public class Ajedrez {
       JSONObject pieza = piezasNegras.getJSONObject(i);
       String type = pieza.getString("tipo");
       if(type.equals("p")) {
-        Pieza piezaObj = factory.crearPieza(Type.Pawn,pieza.getBoolean("blanco"),partida,pieza.getInt("x"),pieza.getInt("y"),loadImage("blackPawn.png"));
+        Pieza piezaObj = factory.crearPieza(Type.Pawn,pieza.getBoolean("blanco"),partida,pieza.getInt("x"),pieza.getInt("y"),loadImage("Pieces/blackPawn.png"));
         Pawn pawn = (Pawn) piezaObj;
         pawn.setMovido(pieza.getBoolean("movido"));
         negras.add(piezaObj);
       } else if(type.equals("r")) {
-        Pieza piezaObj = factory.crearPieza(Type.Rook,pieza.getBoolean("blanco"),partida,pieza.getInt("x"),pieza.getInt("y"),loadImage("blackRook.png"));
+        Pieza piezaObj = factory.crearPieza(Type.Rook,pieza.getBoolean("blanco"),partida,pieza.getInt("x"),pieza.getInt("y"),loadImage("Pieces/blackRook.png"));
         Rook rook = (Rook) piezaObj;
         rook.setMovido(pieza.getBoolean("movido"));
         negras.add(piezaObj);
       } else if(type.equals("k")) {
-        Pieza piezaObj = factory.crearPieza(Type.King,pieza.getBoolean("blanco"),partida,pieza.getInt("x"),pieza.getInt("y"),loadImage("blackKing.png"));
+        Pieza piezaObj = factory.crearPieza(Type.King,pieza.getBoolean("blanco"),partida,pieza.getInt("x"),pieza.getInt("y"),loadImage("Pieces/blackKing.png"));
         King king = (King) piezaObj;
         king.setMovido(pieza.getBoolean("movido")); 
         partida.setbKing(piezaObj);
         negras.add(piezaObj);
       } else if(type.equals("n")) {
-        Pieza piezaObj = factory.crearPieza(Type.Knight,pieza.getBoolean("blanco"),partida,pieza.getInt("x"),pieza.getInt("y"),loadImage("blackKnight.png"));
+        Pieza piezaObj = factory.crearPieza(Type.Knight,pieza.getBoolean("blanco"),partida,pieza.getInt("x"),pieza.getInt("y"),loadImage("Pieces/blackKnight.png"));
         negras.add(piezaObj);
       } else if(type.equals("b")) {
-        Pieza piezaObj = factory.crearPieza(Type.Bishop,pieza.getBoolean("blanco"),partida,pieza.getInt("x"),pieza.getInt("y"),loadImage("blackBishop.png"));
+        Pieza piezaObj = factory.crearPieza(Type.Bishop,pieza.getBoolean("blanco"),partida,pieza.getInt("x"),pieza.getInt("y"),loadImage("Pieces/blackBishop.png"));
         negras.add(piezaObj);
       } else if (type.equals("q")) {
-        Pieza piezaObj = factory.crearPieza(Type.Queen,pieza.getBoolean("blanco"),partida,pieza.getInt("x"),pieza.getInt("y"),loadImage("blackQueen.png"));
+        Pieza piezaObj = factory.crearPieza(Type.Queen,pieza.getBoolean("blanco"),partida,pieza.getInt("x"),pieza.getInt("y"),loadImage("Pieces/blackQueen.png"));
         negras.add(piezaObj);
       }
     }
@@ -237,32 +237,32 @@ public class Ajedrez {
       String type = pieza.getString("tipo");
       PImage img = null;
       if(type.equals("p")) {
-        if(pieza.getBoolean("blanco")) img = loadImage("whitePawn.png");
+        if(pieza.getBoolean("blanco")) img = loadImage("Pieces/whitePawn.png");
         else img = loadImage("blackPawn.png");
         Pieza piezaObj = factory.crearPieza(Type.Pawn,pieza.getBoolean("blanco"),partida,pieza.getInt("x"),pieza.getInt("y"),img);
         capturadas.add(piezaObj);
       } else if(type.equals("r")) {
-        if(pieza.getBoolean("blanco")) img = loadImage("whiteRook.png");
+        if(pieza.getBoolean("blanco")) img = loadImage("Pieces/whiteRook.png");
         else img = loadImage("blackRook.png");
         Pieza piezaObj = factory.crearPieza(Type.Rook,pieza.getBoolean("blanco"),partida,pieza.getInt("x"),pieza.getInt("y"),img);
         capturadas.add(piezaObj);
       } else if(type.equals("k")) {
-        if(pieza.getBoolean("blanco")) img = loadImage("whiteKing.png");
+        if(pieza.getBoolean("blanco")) img = loadImage("Pieces/whiteKing.png");
         else img = loadImage("blackKing.png");
         Pieza piezaObj = factory.crearPieza(Type.King,pieza.getBoolean("blanco"),partida,pieza.getInt("x"),pieza.getInt("y"),img);
         capturadas.add(piezaObj);
       } else if(type.equals("n")) {
-        if(pieza.getBoolean("blanco")) img = loadImage("whiteKnight.png");
+        if(pieza.getBoolean("blanco")) img = loadImage("Pieces/whiteKnight.png");
         else img = loadImage("blackKnight.png");
         Pieza piezaObj = factory.crearPieza(Type.Knight,pieza.getBoolean("blanco"),partida,pieza.getInt("x"),pieza.getInt("y"),img);
         capturadas.add(piezaObj);
       } else if(type.equals("b")) {
-        if(pieza.getBoolean("blanco")) img = loadImage("whiteBishop.png");
+        if(pieza.getBoolean("blanco")) img = loadImage("Pieces/whiteBishop.png");
         else img = loadImage("blackBishop.png");
         Pieza piezaObj = factory.crearPieza(Type.Bishop,pieza.getBoolean("blanco"),partida,pieza.getInt("x"),pieza.getInt("y"),img);
         capturadas.add(piezaObj);
       } else if (type.equals("q")) {
-        if(pieza.getBoolean("blanco")) img = loadImage("whiteQueen.png");
+        if(pieza.getBoolean("blanco")) img = loadImage("Pieces/whiteQueen.png");
         else img = loadImage("blackQueen.png");
         Pieza piezaObj = factory.crearPieza(Type.Queen,pieza.getBoolean("blanco"),partida,pieza.getInt("x"),pieza.getInt("y"),img);
         capturadas.add(piezaObj);

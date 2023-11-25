@@ -37,48 +37,48 @@ class Partida {
    //Inicializa el tablero con piezas en sus posiciones iniciales
    public void inicializarTablero() {
      for(int i = 0; i<8;i++) {
-       Pieza piezaCreada = factory.crearPieza(Type.Pawn,true,this,i,6,loadImage("whitePawn.png"));
+       Pieza piezaCreada = factory.crearPieza(Type.Pawn,true,this,i,6,loadImage("Pieces/whitePawn.png"));
        tablero[6][i] = piezaCreada;
        blancas.add(piezaCreada);
      }
      for(int i = 0; i<8;i++) {
-       Pieza piezaCreada = factory.crearPieza(Type.Pawn,false,this,i,1,loadImage("blackPawn.png"));
+       Pieza piezaCreada = factory.crearPieza(Type.Pawn,false,this,i,1,loadImage("Pieces/blackPawn.png"));
        tablero[1][i] = piezaCreada;
        negras.add(piezaCreada);
      }
-     tablero[7][0] = factory.crearPieza(Type.Rook,true,this,0,7,loadImage("whiteRook.png"));
+     tablero[7][0] = factory.crearPieza(Type.Rook,true,this,0,7,loadImage("Pieces/whiteRook.png"));
      blancas.add(tablero[7][0]);
-     tablero[7][7] = factory.crearPieza(Type.Rook,true,this,7,7,loadImage("whiteRook.png"));
+     tablero[7][7] = factory.crearPieza(Type.Rook,true,this,7,7,loadImage("Pieces/whiteRook.png"));
      blancas.add(tablero[7][7]);
-     tablero[7][1] = factory.crearPieza(Type.Knight,true,this,1,7,loadImage("whiteKnight.png"));
+     tablero[7][1] = factory.crearPieza(Type.Knight,true,this,1,7,loadImage("Pieces/whiteKnight.png"));
      blancas.add(tablero[7][1]);
-     tablero[7][6] = factory.crearPieza(Type.Knight,true,this,6,7,loadImage("whiteKnight.png"));
+     tablero[7][6] = factory.crearPieza(Type.Knight,true,this,6,7,loadImage("Pieces/whiteKnight.png"));
      blancas.add(tablero[7][6]);
-     tablero[7][2] = factory.crearPieza(Type.Bishop,true,this,2,7,loadImage("whiteBishop.png"));
+     tablero[7][2] = factory.crearPieza(Type.Bishop,true,this,2,7,loadImage("Pieces/whiteBishop.png"));
      blancas.add(tablero[7][2]);
-     tablero[7][5] = factory.crearPieza(Type.Bishop,true,this,5,7,loadImage("whiteBishop.png"));
+     tablero[7][5] = factory.crearPieza(Type.Bishop,true,this,5,7,loadImage("Pieces/whiteBishop.png"));
      blancas.add(tablero[7][5]);
-     tablero[7][3] = factory.crearPieza(Type.Queen,true,this,3,7,loadImage("whiteQueen.png"));
+     tablero[7][3] = factory.crearPieza(Type.Queen,true,this,3,7,loadImage("Pieces/whiteQueen.png"));
      blancas.add(tablero[7][3]);
-     tablero[7][4] = factory.crearPieza(Type.King,true,this,4,7,loadImage("whiteKing.png"));
+     tablero[7][4] = factory.crearPieza(Type.King,true,this,4,7,loadImage("Pieces/whiteKing.png"));
      blancas.add(tablero[7][4]);
      wKing = tablero[7][4];
      
-     tablero[0][0] = factory.crearPieza(Type.Rook,false,this,0,0,loadImage("blackRook.png"));
+     tablero[0][0] = factory.crearPieza(Type.Rook,false,this,0,0,loadImage("Pieces/blackRook.png"));
      negras.add(tablero[0][0]);
-     tablero[0][7] = factory.crearPieza(Type.Rook,false,this,7,0,loadImage("blackRook.png"));
+     tablero[0][7] = factory.crearPieza(Type.Rook,false,this,7,0,loadImage("Pieces/blackRook.png"));
      negras.add(tablero[0][7]);
-     tablero[0][1] = factory.crearPieza(Type.Knight,false,this,1,0,loadImage("blackKnight.png"));
+     tablero[0][1] = factory.crearPieza(Type.Knight,false,this,1,0,loadImage("Pieces/blackKnight.png"));
      negras.add(tablero[0][1]);
-     tablero[0][6] = factory.crearPieza(Type.Knight,false,this,6,0,loadImage("blackKnight.png"));
+     tablero[0][6] = factory.crearPieza(Type.Knight,false,this,6,0,loadImage("Pieces/blackKnight.png"));
      negras.add(tablero[0][6]);
-     tablero[0][2] = factory.crearPieza(Type.Bishop,false,this,2,0,loadImage("blackBishop.png"));
+     tablero[0][2] = factory.crearPieza(Type.Bishop,false,this,2,0,loadImage("Pieces/blackBishop.png"));
      negras.add(tablero[0][2]);
-     tablero[0][5] = factory.crearPieza(Type.Bishop,false,this,5,0,loadImage("blackBishop.png"));
+     tablero[0][5] = factory.crearPieza(Type.Bishop,false,this,5,0,loadImage("Pieces/blackBishop.png"));
      negras.add(tablero[0][5]);
-     tablero[0][3] = factory.crearPieza(Type.Queen,false,this,3,0,loadImage("blackQueen.png"));
+     tablero[0][3] = factory.crearPieza(Type.Queen,false,this,3,0,loadImage("Pieces/blackQueen.png"));
      negras.add(tablero[0][3]);
-     tablero[0][4] = factory.crearPieza(Type.King,false,this,4,0,loadImage("blackKing.png"));
+     tablero[0][4] = factory.crearPieza(Type.King,false,this,4,0,loadImage("Pieces/blackKing.png"));
      negras.add(tablero[0][4]);
      bKing = tablero[0][4];
    }
@@ -353,25 +353,25 @@ class Partida {
     int y = pawn.getY();
     if(blanco) {
       if(type == Type.Rook) {
-       tablero[y][x] = factory.crearPieza(Type.Rook,blanco,this,x,y,loadImage("whiteRook.png"));
+       tablero[y][x] = factory.crearPieza(Type.Rook,blanco,this,x,y,loadImage("Pieces/whiteRook.png"));
       } else if (type == Type.Knight) {
-       tablero[y][x] = factory.crearPieza(Type.Knight,blanco,this,x,y,loadImage("whiteKnight.png"));
+       tablero[y][x] = factory.crearPieza(Type.Knight,blanco,this,x,y,loadImage("Pieces/whiteKnight.png"));
       } else if (type == Type.Bishop) {
-       tablero[y][x] = factory.crearPieza(Type.Bishop,blanco,this,x,y,loadImage("whiteBishop.png"));
+       tablero[y][x] = factory.crearPieza(Type.Bishop,blanco,this,x,y,loadImage("Pieces/whiteBishop.png"));
       } else if (type == Type.Queen) {
-        tablero[y][x] = factory.crearPieza(Type.Queen,blanco,this,x,y,loadImage("whiteQueen.png"));
+        tablero[y][x] = factory.crearPieza(Type.Queen,blanco,this,x,y,loadImage("Pieces/whiteQueen.png"));
       }
       blancas.add(tablero[y][x]);
       blancas.remove(pawn);
     } else {
       if(type == Type.Rook) {
-       tablero[y][x] = factory.crearPieza(Type.Rook,blanco,this,x,y,loadImage("blackRook.png"));
+       tablero[y][x] = factory.crearPieza(Type.Rook,blanco,this,x,y,loadImage("Pieces/blackRook.png"));
       } else if (type == Type.Knight) {
-       tablero[y][x] = factory.crearPieza(Type.Knight,blanco,this,x,y,loadImage("blackKnight.png"));
+       tablero[y][x] = factory.crearPieza(Type.Knight,blanco,this,x,y,loadImage("Pieces/blackKnight.png"));
       } else if (type == Type.Bishop) {
-       tablero[y][x] = factory.crearPieza(Type.Bishop,blanco,this,x,y,loadImage("blackBishop.png"));
+       tablero[y][x] = factory.crearPieza(Type.Bishop,blanco,this,x,y,loadImage("Pieces/blackBishop.png"));
       } else if (type == Type.Queen) {
-        tablero[y][x] = factory.crearPieza(Type.Queen,blanco,this,x,y,loadImage("blackQueen.png"));
+        tablero[y][x] = factory.crearPieza(Type.Queen,blanco,this,x,y,loadImage("Pieces/blackQueen.png"));
       }
       negras.add(tablero[y][x]);
       negras.remove(pawn);
